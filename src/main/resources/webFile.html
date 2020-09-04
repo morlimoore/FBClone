@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-File</title>
+</head>
+<body>
+    <h1>Threads In Java</h1>
+    </br></br>
+    <p>
+        Threading is a facility to allow multiple tasks to run concurrently within a single process. 
+        Threads are independent, concurrent execution through a program, and each thread has its own stack.
+    </p>
+    <p>
+        In Java, threads can be implemented in two ways. One is by 'Extending Thread Class' and the other 
+        way is by 'Implementing Runnable Interface'.
+    </p>
+    <p>Extending Thread Class is required to 'override run()' method. The run method contains the actual 
+        logic to be executed by thread. Creation of thread object never starts execution, we need to call 
+        'start()' method to run a thread. Examples gives you more details. Other methods supported by 
+        Threads are given below.
+    </p>
+    <ul>
+        <li>
+            <b>join():</b> It makes to wait for this thread to die. You can wait for a thread to finish by 
+            calling its join() method.
+        </li>
+        <li>
+            <b>sleep():</b> It makes current executing thread to sleep for a specified interval of time. 
+            Time is in milli seconds.
+        </li>
+        <li>
+            <b>yield():</b> It makes current executing thread object to pause temporarily and gives control
+             to other thread to execute.
+        </li>
+        <li>
+            <b>notify():</b> This method is inherited from Object class. This method wakes up a single thread 
+            that is waiting on this object's monitor to acquire lock.
+        </li>
+        <li>
+            <b>notifyAll():</b> This method is inherited from Object class. This method wakes up all threads 
+            that are waiting on this object's monitor to acquire lock.
+        </li>
+        <li>
+            <b>wait():</b> This method is inherited from Object class. This method makes current thread to wait
+             until another thread invokes the notify() or the notifyAll() for this object.
+        </li>
+    </ul>
+
+</body>
+</html>
