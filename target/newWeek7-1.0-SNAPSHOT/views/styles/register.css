@@ -1,0 +1,16 @@
+body {
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+form {
+    background-color: #4D2C72;
+    color: #fff;
+    padding: 12px;
+}
+
+button {
+    padding: 6px 10px;
+    margin: 7px;
+}

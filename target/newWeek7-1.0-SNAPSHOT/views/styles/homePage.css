@@ -1,0 +1,32 @@
+header ul {
+    background-color: #4D2C72;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 7px;
+}
+
+header li {
+    padding: 10px;
+}
+
+section {
+    border: 1px solid #4D2C72;
+    border-radius: 3px;
+    margin: 10px;
+    /* height: 50px; */
+    text-align: center;
+}
+
+.user_info {
+    margin: 5px;
+    padding: 5px;
+    text-align: left;
+}
+
+section ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}

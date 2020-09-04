@@ -1,0 +1,46 @@
+CREATE TABLE users (
+	userID INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+	fName VARCHAR(255) NOT NULL,
+	lName VARCHAR(255) NOT NULL,
+	email VARCHAR(255) UNIQUE NOT NULL,
+	hash VARCHAR(255) NOT NULL,
+	dateOfBirth DATETIME NOT NULL,
+	gender VARCHAR(255) NOT NULL,
+	createdAt DATETIME NOT NULL
+);
+
+
+INSERT INTO users(fName, lName, email, hash, dateOfBirth, gender, createdAt) VALUES("kaito", "echendu", "kaito@gmail.com", "2020/08/29 19:40:58");
+
+
+
+CREATE TABLE comments (
+	commentID INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+	message TEXT NOT NULL,
+	userID INT NOT NULL,
+	postID INT NOT NULL,
+	likes INT NOT NULL,
+	createdAt DATETIME NOT NULL,
+	FOREIGN KEY (userID) REFERENCES users(userID),
+	FOREIGN KEY (postID) REFERENCES posts(postID)
+);
+
+
+
+CREATE TABLE posts (
+	postID INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+	message TEXT NOT NULL,
+	userID INT NOT NULL,
+	likes INT NOT NULL,
+	createdAt DATETIME NOT NULL,
+	FOREIGN KEY (userID) REFERENCES users(userID)
+);
+
+
+INSERT INTO posts (message, userID, likes, createdAt) VALUES ("Nchedo: Yes, this is a very long post.
+I appreciate what you are doing, kudosssss!", 17, 1, "2020-08-30 09:47:10");
+
+INSERT INTO posts (message, userID, likes, createdAt) VALUES ("Chidinma: Hello world, this my post", 14, 1, "2020-08-30 09:47:10");
+
+INSERT INTO posts (message, userID, likes, createdAt) VALUES ("Ify: Yes, this is my second post and a very long post too.
+I appreciate what you are doing, kudosssss!", 23, 1, "2020-08-30 09:47:10");
